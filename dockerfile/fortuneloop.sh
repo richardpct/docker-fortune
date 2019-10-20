@@ -1,6 +1,14 @@
-#/bin/sh
+#!/bin/bash
 
-while true ; do
+if [ $# -ne 1 ]; then
+  INTERVAL=10
+else
+  INTERVAL=$1
+fi
+
+echo "INTERVAL: $INTERVAL"
+
+while true; do
   fortune > /var/page/index.html
-  sleep 10
+  sleep $INTERVAL
 done
