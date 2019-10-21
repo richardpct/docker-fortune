@@ -1,9 +1,7 @@
 #!/bin/bash
 
-if [ $# -ne 1 ]; then
+if [ -z "$INTERVAL" ]; then
   INTERVAL=10
-else
-  INTERVAL=$1
 fi
 
 echo "INTERVAL: $INTERVAL"
